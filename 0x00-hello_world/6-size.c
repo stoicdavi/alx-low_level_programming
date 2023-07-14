@@ -2,7 +2,7 @@
 int main(void)
 /**
  * main - Entry point
- *
+ *printf() outputs data
  * Return: Always 0 (Success)
  */
 {
