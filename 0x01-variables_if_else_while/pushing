@@ -2,6 +2,6 @@
 
 git add .
 
-git commit -m 'Looping in C, It is amazing'
+git commit -m 'prints all single digit numbers of base 10 starting from 0, followed by a new line.'
 
 git push
