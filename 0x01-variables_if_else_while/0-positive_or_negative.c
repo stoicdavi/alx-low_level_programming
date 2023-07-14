@@ -23,10 +23,10 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
 	if (n > 0)
-		printf("is positive");
+		printf("%lu is positive", n);
 	else if (n == 0)
-		printf("is zero");
+		printf("%lu is zero", n);
 	else if (n < 0)
-		printf("is negative");
+		printf("%lu is negative", n);
 	return (0);
 }
