@@ -2,6 +2,6 @@
 
 git add .
 
-git commit -m 'prints all single digit numbers of base 10 starting from 0, followed by a new line.'
+git commit -m 'rite a program that prints all possible different combinations of two digits.'
 
 git push
