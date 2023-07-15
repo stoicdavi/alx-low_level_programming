@@ -9,9 +9,9 @@ int main(void)
 	int outer;
 	int inner;
 
-	for (outer = 0; outer < 9; outer++)
+	for (outer = 0; outer <= 9; outer++)
 	{
-		for (inner = 0; inner < 10; inner++)
+		for (inner = outer + 1; inner < 10; inner++)
 		{
 			putchar(outer + '0');
 			putchar(inner + '0');
