@@ -2,6 +2,8 @@
 
 git add .
 
-git commit -m 'rite a program that prints all possible different combinations of two digits.'
+git commit -m 'Write a program that prints all possible combinations of two two-digit numbers.
+
+The numbers should range from 0 to 99'
 
 git push
