@@ -14,18 +14,25 @@ int main(void)
 {
 	int outer;
 	int inner;
+	int inner2;
 
-	for (outer = 0; outer <= 9; outer++)
+	for (outer = 0; outer <= 7; outer++)
 	{
-		for (inner = 0; inner <= 9; inner++)
+		for (inner = 0; inner <= 8; inner++)
 		{
-			putchar(outer + '0');
-			putchar(inner + '0');
+			for (inner2 = 0; inner2 <= 9; inner2)
+			{
+				putchar(outer + '0');
+				putchar(inner + '0');
+				putchar(inner2 + '0');
 
-			if (outer == 9 && inner == 9)
+				if (outer == 7 && inner == 8 && inner2 == 9)
 				continue;
-			putchar(',');
-			putchar(' ');
+
+				putchar(',');
+
+				putchar(' ');
+			}
 		}
 	}
 	putchar('\n');
