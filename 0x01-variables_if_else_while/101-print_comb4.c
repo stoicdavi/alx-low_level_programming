@@ -18,16 +18,16 @@ int main(void)
 
 	for (outer = 0; outer < 8; outer++)
 	{
-		for (inner = 0; inner < 9; inner++)
+		for (inner = outer + 1; inner < 9; inner++)
 		{
-			for (inner2 = 0; inner2 <= 10; inner2)
+			for (inner2 = inner + 1; inner2 <= 9; inner2++)
 			{
 				putchar(outer + '0');
 				putchar(inner + '0');
 				putchar(inner2 + '0');
 
 				if (outer == 7 && inner == 8 && inner2 == 9)
-					continue;
+					break;
 
 				putchar(',');
 
