@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * main - this is the entry point to the program
  *
@@ -11,6 +10,6 @@ int main(void)
 	int b;
 
 	for (b = 0; b < 9; b++)
-		putchar(name[b]);
+		_putchar(name[b]);
 	return (0);
 }
