@@ -2,6 +2,8 @@
 
 git add .
 
-git commit -m "function that checks for lowercase character."
+git commit -m "a function that checks for alphabetic character.
+
+Prototype: int _isalpha(int c);"
 
 git push
