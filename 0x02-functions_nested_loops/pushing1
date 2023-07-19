@@ -2,6 +2,6 @@
 
 git add .
 
-git commit -m " function that computes the absolute value of an integer."
+git commit -m "a function that prints the last digit of a number."
 
 git push
