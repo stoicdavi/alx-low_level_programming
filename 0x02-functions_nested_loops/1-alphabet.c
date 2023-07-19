@@ -1,8 +1,13 @@
 #include "main.h"
+#include <unistd.h>
 
 /**
 * print_alphabet - wil print the alphabets
 */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
 void print_alphabet(void)
 {
 	char letter;
@@ -10,14 +15,4 @@ void print_alphabet(void)
 	for (letter = 97; letter <= 122; letter++)
 		_putchar(letter);
 	_putchar('\n');
-}
-/**
- * main - Entry point
- * Return: 0 when success
- */
-int main(void)
-{
-	print_alphabet();
-
-	return (0);
 }
