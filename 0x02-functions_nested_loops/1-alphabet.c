@@ -1,16 +1,23 @@
 #include "main.h"
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+* print_alphabet - wil print the alphabets
+*/
+void print_alphabet(void)
+{
+	char letter;
+
+	for (letter = 97; letter <= 122; letter++)
+		_putchar(letter);
+	_putchar('\n');
+}
+/**
+ * main - Entry point
+ * Return: 0 when success
  */
 int main(void)
 {
-	char alphabet;
+	print_alphabet();
 
-	for (alphabet = 97; alphabet <= 122; alphabet++)
-		_putchar(alphabet);
-	_putchar('\n');
 	return (0);
 }
