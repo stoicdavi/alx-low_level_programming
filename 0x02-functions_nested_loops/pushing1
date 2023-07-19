@@ -2,6 +2,6 @@
 
 git add .
 
-git commit -m " function that prints the sign of a number."
+git commit -m " function that computes the absolute value of an integer."
 
 git push
