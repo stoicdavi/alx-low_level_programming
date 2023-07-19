@@ -2,8 +2,6 @@
 
 git add .
 
-git commit -m "a function that checks for alphabetic character.
-
-Prototype: int _isalpha(int c);"
+git commit -m " function that prints the sign of a number."
 
 git push
