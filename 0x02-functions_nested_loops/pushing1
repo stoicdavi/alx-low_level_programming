@@ -1,7 +1,7 @@
-i!/bin/bash
+#!/bin/bash
 
 git add .
 
-git commit -m "function that prints 10 times the alphabet, in lowercase, followed by a new line"
+git commit -m "function that prints 10 times the alphabet, in lowercase, followed by a new line."
 
 git push
