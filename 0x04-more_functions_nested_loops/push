@@ -2,6 +2,6 @@
 
 git add .
 
-git commit -m "a function that draws a diagonal line on the terminal."
+git commit -m " function that multiplies two integers"
 
 git push
