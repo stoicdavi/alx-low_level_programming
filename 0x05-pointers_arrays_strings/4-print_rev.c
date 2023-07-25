@@ -6,7 +6,7 @@
   */
 void print_rev(char *s)
 {
-	int i;/*, j; for for loop*/
+	int i;/*, i for the while loop*/
 
 	i = 0;
 	while (s[i] != '\0')
@@ -14,10 +14,15 @@ void print_rev(char *s)
 		i++;
 	}
 	/**
-	* for (j = i - 1; j >= 0; j--)
-	*{
-		*_putchar(s[j]);
+	  * alternative code
+	  * int i;
+	  * int count = 0;
+	  * for (i = 0; s[i] != '\0'; i++)
+		*count++;
+		* for (i = count - 1; i >= 0; i++)
+		* _putchar(s[i])
 	*}
+	* _putchar('\n');
 	*/
 	i--;
 	while (i >= 0)
