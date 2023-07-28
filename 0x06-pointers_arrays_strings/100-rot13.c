@@ -25,39 +25,3 @@ char *rot13(char *s)
 	}
 	return (s);
 }
-/*#include <stdio.h>*/
-
-/**
-  * rot13 - encodes a string using ROT13 cipher
-  * @s: string to encode
-  *
-  * Return: the resulting encoded string
-   */
-/*
- * char *rot13(char *s)
-  *{
-	*char *ptr = s;
-	*char alphabet[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	*char rot13_alphabet[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
-
-	*while (*ptr != '\0')
-	*{
-	*	char *found = alphabet;
-	*	char *rot13_found = rot13_alphabet;
-	*	int found_index = 0;
-	*	while (*found != '\0')
-	*	{
-	*		if (*ptr == *found)
-	*		{
-	*			*ptr = rot13_found[found_index];
-	*			break;
-	*		}
-	*		found++;
-	*		rot13_found++;
-	*		found_index++;
-	*	}
-	*	ptr++;
-	*}
-	* return s;
-* }
-*/
