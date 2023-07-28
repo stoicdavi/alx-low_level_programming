@@ -1,14 +1,13 @@
-#include "main.h"
 #include <stdio.h>
-
+#include "main.h"
 /**
-  * print_line - prints s bytes of a buffer
-  * @c: buffer to be printed
-  * @s: bytes of buffer to print
-  * @l: line of buffer to print
-  *
-  * Return: void
-  */
+ * print_line - prints s bytes of a buffer
+ * @c: buffer to be printed
+ * @s: bytes of buffer to print
+ * @l: line of buffer to print
+ *
+ * Return: void
+ */
 void print_line(char *c, int s, int l)
 {
 	int t, k;
@@ -16,34 +15,34 @@ void print_line(char *c, int s, int l)
 	for (t = 0; t <= 9; t++)
 	{
 		if (t <= s)
-			printf("%02x", c[l * 10 + t]);
+			printf("%02x", c[l * 10 + t] & 0xFF); /* Msk byt,nsre trited as unsigned c*/
 		else
 			printf("  ");
 		if (t % 2)
 			putchar(' ');
-		{
-			for (k = 0; k <= s; k++)
-			{
-				if (c[l * 10 + k] > 31 && c[l * 10 + k] < 127)
-					putchar(c[l * 10 + k]);
-				else
-					putchar('.');
-			}
-		}
+	}
+	putchar(' '); /* Add space before displaying characters part of the line*/
+	for (k = 0; k <= s; k++)
+	{
+		if (k <= s && c[l * 10 + k] >= 32 && c[l * 10 + k] <= 126)
+			putchar(c[l * 10 + k]);
+		else
+			putchar('.');
 	}
 }
+
 /**
- * print_buffer - a function that prints the buffer
- * @b: buffer to be printed
- * @size: size of the buffer
- *
- * Return: void
- */
+  * print_buffer - a function that prints the buffer
+  * @b: buffer to be printed
+  * @size: size of the buffer
+  *
+  * Return: void
+  */
 void print_buffer(char *b, int size)
 {
 	int m;
 
-	for (m = 0; m <= (size - 1) / 10 && size; m++)
+	for (m = 0; m <= (size - 1) / 10 && size > 0; m++)
 	{
 		printf("%08x: ", m * 10);
 		if (m < size / 10)
@@ -56,6 +55,6 @@ void print_buffer(char *b, int size)
 		}
 		putchar('\n');
 	}
-	if (size == 0)
+	if (size <= 0)
 		putchar('\n');
 }
