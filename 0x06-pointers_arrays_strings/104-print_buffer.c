@@ -15,13 +15,13 @@ void print_line(char *c, int s, int l)
 	for (t = 0; t <= 9; t++)
 	{
 		if (t <= s)
-			printf("%02x", c[l * 10 + t] & 0xFF); /* Msk byt,nsre trited as unsigned c*/
+			printf("%02x", c[l * 10 + t] & 0xFF);
 		else
 			printf("  ");
 		if (t % 2)
 			putchar(' ');
 	}
-	putchar(' '); /* Add space before displaying characters part of the line*/
+	putchar(' ');
 	for (k = 0; k <= s; k++)
 	{
 		if (k <= s && c[l * 10 + k] >= 32 && c[l * 10 + k] <= 126)
