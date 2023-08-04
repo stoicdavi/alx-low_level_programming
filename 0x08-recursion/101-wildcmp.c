@@ -1,45 +1,22 @@
 #include "main.h"
 
-int _strlen_recursion(char *s);
-int help_chack_pal(char *s, int i, int len);
-
 /**
-  * is_palindrome - check if string is palindrome
-  * @s: string input
-  *
-  * Return: 0 it is not palindrome
+  * wildcmp - function to compares two strings
+  * @s1: first string
+  * @s2: second string
+  * Return: 1 if they match and 0 if not
   */
-int is_palindrome(char *s)
+int wildcmp(char *s1, char *s2)
 {
-	if (*s == 0)
-		return (1);
-	return (help_chack_pal(s, 0, _strlen_recursion(s)));
-}
+	int n = '\0';
 
-/**
-  * _strlen_recursion - A function that chack if s is a palindrome string
-  * @s: An input tsring
-  * Return: i if is a string palindrome or  0 in otherwise
-  */
-int _strlen_recursion(char *s)
-{
-	if (*s == '\0')
-		return (0);
-	return (1 + _strlen_recursion(s + 1));
-}
-
-/**
- * help_chack_pal - A function with a revesed string
- * @s: an input string
- * @len:length of string
- * @i: iterator
- * Return: reverse string
- */
-int help_chack_pal(char *s, int i,  int len)
-{
-	if (*(s + i) != *(s + len - 1))
-		return (0);
-	if (i >= len)
+	if (s1[n] && s2[n])
 		return (1);
-	return (help_chack_pal(s, i + 1, len - 1));
+	if (s2[n] == 42 && *(s2 + 1) != '\0' && s1[n])
+		return (0);
+	if (s1[n] == s2[n])
+		return (wildcmp(s1 + 1, s2 + 1));
+	if (s2[n] == 42)
+		return (wildcmp(s1, s2 + 1) || wildcmp(s1 + 1, s2));
+	return (0);
 }
