@@ -1,9 +1,8 @@
-#include "main.h"
 #include <stdio.h>
 /**
   * main -function that prints its name followed by a new line
   * @argv: argument vector holds the array of string
-  * @rgc: argumrnt count
+  * @argc: argumrnt count
   * Return: 0 when succss
   */
 int main(int argc, char **argv)
