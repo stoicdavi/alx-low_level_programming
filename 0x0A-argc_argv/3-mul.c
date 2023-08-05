@@ -3,7 +3,7 @@
 /**
   * main - funtion that multiplies two values
   * @argc: argument counter
-  * @argc: the string
+  * @argv the string
   * Ruturn: 1 when not seccess
   * Return: 0 when success
   */
