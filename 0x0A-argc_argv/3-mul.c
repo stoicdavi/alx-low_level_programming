@@ -1,9 +1,10 @@
 #include <stdio.h>
+#include "main.h"
 #include <stdlib.h>
 /**
   * main - funtion that multiplies two values
   * @argc: argument counter
-  * @argv the string
+  * @argv: the string
   * Ruturn: 1 when not seccess
   * Return: 0 when success
   */
