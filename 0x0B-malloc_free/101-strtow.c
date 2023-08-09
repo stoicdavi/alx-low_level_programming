@@ -5,38 +5,38 @@ void util(char **, char *);
 void create_word(char **, char *, int, int, int);
 
 /**
-  * strtow -fuplits a string into words.
+  * strtow -function splits a string into words
   * @str: the string
   *
   * Return: returns a pointer to an array of strings (words)
   */
 char **strtow(char *str)
 {
-	int i, flag, len;
+	int a, flag, length;
 	char **words;
 
 	if (str == NULL || str[0] == '\0' || (str[0] == ' ' && str[1] == '\0'))
 		return (NULL);
-	i = flag = len = 0;
-	while (str[i])
+	a = flag = length = 0;
+	while (str[a])
 	{
-		if (flag == 0 && str[i] != ' ')
+		if (flag == 0 && str[a] != ' ')
 			flag = 1;
-		if (i > 0 && str[i] == ' ' && str[i - 1] != ' ')
+		if (a > 0 && str[a] == ' ' && str[a - 1] != ' ')
 		{
 			flag = 0;
-			len++;
+			length++;
 		}
-		i++;
+		a++;
 	}
-	len += flag == 1 ? 1 : 0;
-	if (len == 0)
+	length += flag == 1 ? 1 : 0;
+	if (length == 0)
 		return (NULL);
-	words = (char **)malloc(sizeof(char *) * (len + 1));
+	words = (char **)malloc(sizeof(char *) * (length + 1));
 	if (words == NULL)
 		return (NULL);
 	util(words, str);
-	words[len] = NULL;
+	words[length] = NULL;
 	return (words);
 }
 
