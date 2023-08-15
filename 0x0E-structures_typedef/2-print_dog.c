@@ -3,7 +3,6 @@
 #include <stdlib.h>
 /**
   * print_dog - to print the dong description
-  * @dog: the object
   * @d: pointer
   */
 void print_dog(struct dog *d)
