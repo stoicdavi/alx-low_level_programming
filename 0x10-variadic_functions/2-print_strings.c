@@ -9,15 +9,17 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	va_list str;
 	unsigned int b;
 
-	va_start(string, n);
-	 for (b = 0; b < n; b++)
-	 {
-		 printf("%s", va_arg(str, char));
-		 if (i = n - 1)
-		 {
-			 printf("s", separator);
-		 }
-	 }
-	 printf("\n");
-	 va_end(str);
+	va_start(str, n);
+	if (str == NULL)
+		printf("(nil)");
+	for (b = 0; b < n; b++)
+	{
+		printf("%s", va_arg(str, char *));
+		if (b != n - 1 && separator != NULL)
+		{
+			printf("%s", separator);
+		}
+	}
+	printf("\n");
+	va_end(str);
 }
