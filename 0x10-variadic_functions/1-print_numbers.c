@@ -14,8 +14,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	int a;
 
 	va_start(number, n);
-	if (separator == NULL)
-		return;
 	for (b = 0; b < n; b++)
 	{
 		a = va_arg(number, int);
