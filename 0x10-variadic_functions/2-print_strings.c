@@ -3,7 +3,7 @@
 #include <stdio.h>
 /**
   * print_strings - function to print strings
-  * @separator: comms sepators
+  * @separator: comma separators to separate the numbers
   * @n: number of arguments
   */
 void print_strings(const char *separator, const unsigned int n, ...)
