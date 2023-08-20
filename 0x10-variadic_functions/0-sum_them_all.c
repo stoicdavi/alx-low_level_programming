@@ -4,7 +4,6 @@
   * sum_them_all - function to sum all the values
   * @n: the size of the arguments
   * Return: 0 if n is equal to zero else return sum
-  * n is the number of arguments
   */
 int sum_them_all(const unsigned int n, ...)
 {
