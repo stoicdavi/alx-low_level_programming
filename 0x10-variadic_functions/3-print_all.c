@@ -22,18 +22,18 @@ void print_all(const char * const format, ...)
 				b = 0;
 				break;
 			case 'i':
-				printf(" %i", va_arg(list, int));
+				printf("%i", va_arg(list, int));
 				b = 0;
 				break;
 			case 'f':
-				printf(" %f ", va_arg(list, double));
+				printf("%f", va_arg(list, double));
 				b = 0;
 				break;
 			case 's':
 				str = va_arg(list, char*);
 				if (str == NULL)
 					printf("(nil)");
-				printf(" %s", str);
+				printf("%s", str);
 				b = 0;
 				break;
 			default:
@@ -41,7 +41,7 @@ void print_all(const char * const format, ...)
 				break;
 		}
 		if (format[i + 1] != '\0' && b == 0)
-			printf(",");
+			printf(", ");
 		i++;
 	}
 	printf("\n");
