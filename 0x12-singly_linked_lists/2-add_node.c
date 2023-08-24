@@ -22,12 +22,12 @@ list_t *add_node(list_t **head, const char *str)
 	new->len = str_len(new->str);
 	new->next = *head;
 	*head = new;
-	return new;
+	return (new);
 }
 
 /**
  * str_len - finds the length of a string
- * @str: string to be checked the length
+ * @st: string to be checked the length
  * Return: length of string
  */
 size_t str_len(char *st)
