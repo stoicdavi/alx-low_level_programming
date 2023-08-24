@@ -2,15 +2,14 @@
 size_t str_len(char *str);
 list_t *add_node(list_t **head, const char *str);
 /**
- * _strlen - finds the length of a string
- * @str: string to find the length of
+ * str_len - finds the length of a string
+ * @str: string to be checked the length
  *
  * Return: length of string
  */
 size_t str_len(char *str)
 {
 	size_t count = 0;
-	
 
 	for (; str[count];)
 	{
@@ -20,7 +19,7 @@ size_t str_len(char *str)
 }
 
 /**
- * add_node_end - adds a new node to the end of linked list
+ * add_node - adds a new node to the end of linked list
  * @head: double pointer to a linked list
  * @str: string to add to the new node
  *
