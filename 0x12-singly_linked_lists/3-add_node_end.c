@@ -1,10 +1,10 @@
 #include "lists.h"
 size_t str_len(char *str);
 /**
- * add_node - adds a new node to the end of linked list
- * @head: double pointer to a linked list
+ * add_node_end - adds a new node to the end of linked list
+ * @head: pointer to the start of the linked list
  * @str: string to add to the new node
- * Return: pointer to the new node
+ * Return: address of the new element and NULL if fails
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
