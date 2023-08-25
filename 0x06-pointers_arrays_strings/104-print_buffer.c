@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include "main.h"
+void print_line(char *c, int s, int l);
+void print_line(char *c, int s, int l);
 /**
  * print_line - prints s bytes of a buffer
  * @c: buffer to be printed
@@ -51,7 +53,7 @@ void print_buffer(char *b, int size)
 		}
 		else
 		{
-			print_line(b, size % 10 - 1, m);
+			print_line(b, size % 10, m);
 		}
 		putchar('\n');
 	}
