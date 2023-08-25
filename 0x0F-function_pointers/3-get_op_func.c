@@ -1,3 +1,4 @@
+#include "3-calc.h"
 /**
  * get_op_func - funtion that holds 5 functions
  * @s: operator passed as argument
@@ -15,11 +16,11 @@ int (*get_op_func(char *s))(int, int)
 	};
 	int i = 0;
 
-	while (ops[i] != NULL)
+	while (ops[i].op != NULL)
 	{
-		if (strcp(s, ops[i].op) == 0)
+		if (strcmp(s, ops[i].op) == 0)
 			return (ops[i].f);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
