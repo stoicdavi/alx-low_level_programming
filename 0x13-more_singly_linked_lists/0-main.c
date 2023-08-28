@@ -1,17 +1,18 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
-#include <lists.h>
+#include "lists.h"
+
 /**
-  * main - check the cde
-  * 
-  * Return: Always 0.
-  */
+ * main - check the code
+ * 
+ * Return: Always 0.
+ */
 int main(void)
 {
 	listint_t *head;
 	listint_t *new;
-	listint_t hello = {8, NULL};
+	listint_t hello = {NULL, 8, NULL};
 	size_t n;
 
 	head = &hello;
@@ -19,7 +20,7 @@ int main(void)
 	if (new == NULL)
 	{
 		printf("Error\n");
-		return(1);
+		return (1);
 	}
 	new->n = 9;
 	new->next = head;
