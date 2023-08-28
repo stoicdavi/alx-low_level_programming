@@ -6,7 +6,7 @@
  * times_table - outputs
  * Return: no return
  */
-void times_table(int n)
+void print_times_table(int n)
 {
 	int a, b, op;
 
