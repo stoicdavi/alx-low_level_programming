@@ -7,14 +7,16 @@
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
+	/*declaring nodes */
 	listint_t *new;
 	listint_t *temp;
 
 	if (head == NULL)
 		return (NULL);
-	new = malloc(sizeof(listint_t));
-	if (new == NULL)
+	new = malloc(sizeof(listint_t));/*allocating memory to the new node*/
+	if (new == NULL)/*if the memory allocation failed*/
 		return (NULL);
+	/*assigning adress to the nodes*/
 	new->n = n;
 	new->next = NULL;
 	if (*head == NULL)
@@ -22,7 +24,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		*head = new;
 		return (new);
 	}
-	temp = *head;
+	temp = *head;/*setting temp to point to start from the head*/
 	while (temp->next != NULL)
 	{
 		temp = temp->next;

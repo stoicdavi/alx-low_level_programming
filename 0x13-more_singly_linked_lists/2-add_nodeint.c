@@ -8,13 +8,14 @@
  */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
-	listint_t *temp;
+	listint_t *temp;/*declare a pointer to the list_t*/
 
+	/* allocatint memory to the temporary pointer*/
 	temp = malloc(sizeof(listint_t));
-	if (temp == NULL)
+	if (temp == NULL)/*if the memory allocation fails*/
 		return (NULL);
-	temp->next = *head;
-	temp->n = n;
-	*head = temp;
-	return (*head);
+	temp->next = *head;/* sets the next pointer to the head*/
+	temp->n = n;/*seting the data of the temp*/
+	*head = temp;/*update head pointer to point to the new node*/
+	return (*head);/*return the address of the new head*/
 }
