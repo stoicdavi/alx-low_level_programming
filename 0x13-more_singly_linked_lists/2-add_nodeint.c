@@ -11,7 +11,7 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	listint_t *temp;/*declare a pointer to the list_t*/
 
 	/* allocatint memory to the temporary pointer*/
-	temp = malloc(sizeof(listint_t));
+	temp = (listint_t *) malloc(sizeof(listint_t));
 	if (temp == NULL)/*if the memory allocation fails*/
 		return (NULL);
 	temp->next = *head;/* sets the next pointer to the head*/
