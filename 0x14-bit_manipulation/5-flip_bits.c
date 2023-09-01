@@ -1,5 +1,5 @@
 #include "main.h"
-/** 
+/**
  * flip_bits - rturns number of bits you would need to flip
  * @n: the first bit
  * @m: The second bit
