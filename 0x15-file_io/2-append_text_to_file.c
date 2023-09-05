@@ -1,7 +1,7 @@
 #include "main.h"
 size_t strilen(char *str);
 /**
- * append_test_to_file - funtion that appends text at the end of the file
+ * append_text_to_file - funtion that appends text at the end of the file
  * @filename: name of the file to be appended into
  * @text_content: the text to appended into tbe filename file
  * Return: 1 on success and -1on failure
@@ -27,7 +27,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	return (1);
 }
 /**
- * strlen -funtion to return the length of a string
+ * strilen -funtion to return the length of a string
  * @str: the given string
  * Return: the length of the string
  */
