@@ -37,7 +37,8 @@ void check_file(ssize_t check, const char *filename, int fd_from, int fd_to)
 	}
 }
 /**
- * check_fileCreated - function to check whether the file was created successfully
+ * check_fileCreated - function to check whether the file was
+ * reated successfully
  * @check: checks if the file exists
  * @filename: file to be created
  * @fd_from: file descriptor for file_from
@@ -46,7 +47,8 @@ void check_file(ssize_t check, const char *filename, int fd_from, int fd_to)
  * If the file cannot be created or written to,
  * it prints an error message and exits with code 99.
  */
-void check_fileCreated(ssize_t check, const char *filename, int fd_from, int fd_to)
+void check_fileCreated(ssize_t check, const char *filename,
+		int fd_from, int fd_to)
 {
 	if (check == -1)
 	{
@@ -75,7 +77,12 @@ void check_fd(int check, int file_d)
 		exit(100);
 	}
 }
-
+/**
+  * main - function to check the codes
+  * @argc: argument counter
+  * @argv: argument value
+  * Return: 0 on success execution
+  */
 int main(int argc, char *argv[])
 {
 	int fd_from, fd_to;
@@ -95,7 +102,7 @@ int main(int argc, char *argv[])
 	while ((lenrd = read(fd_from, buffer, sizeof(buffer) - 1)) > 0)
 	{
 		ssize_t lenwr = write(fd_to, buffer, lenrd);
-		if (lenwr != lenrd)
+			if (lenwr != lenrd)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			close(fd_from);
@@ -107,5 +114,5 @@ int main(int argc, char *argv[])
 	close(fd_from);
 	close(fd_to);
 
-	return 0;
+	return (0);
 }
