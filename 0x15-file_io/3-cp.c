@@ -47,7 +47,8 @@ void check_file(ssize_t check, const char *filename, int fd_from, int fd_to)
  * If the file cannot be created or written to,
  * it prints an error message and exits with code 99.
  */
-void check_fileCreated(ssize_t check, const char *filename, int fd_from, int fd_to)
+void check_fileCreated(ssize_t check,
+		const char *filename, int fd_from, int fd_to)
 {
 	if (check == -1)
 	{
