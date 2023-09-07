@@ -88,12 +88,14 @@ int main(int argc, char *argv[])
 	ssize_t lenrd, lenwr;
 	mode_t file_p;
 	char buffer[1024];
-
+	/*checking if the number of command line args is correct*/
 	check_arg(argc);
 
+	/*ope the file specified by the command-line arg (argv[1]*/
 	fd_from = open(argv[1], O_RDONLY);
+	/*check whether the files exists and can be read*/
 	check_file((ssize_t)fd_from, argv[1], -1, -1);
-
+	/*file permisions*/
 	file_p = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, file_p);
 	check_fileCreated((ssize_t)fd_to, argv[2], fd_from, -1);
@@ -103,7 +105,9 @@ int main(int argc, char *argv[])
 	while (lenrd == 1024)
 	{
 		lenrd = read(fd_from, buffer, 1024);
+		/*checks if read op was succesful*/
 		check_file(lenrd, argv[1], fd_from, fd_to);
+		/*write data read from the source to dest file*/
 		lenwr = write(fd_to, buffer, lenrd);
 		if (lenwr != lenrd)
 			lenwr = -1;
